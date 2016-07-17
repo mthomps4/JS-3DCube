@@ -1,0 +1,66 @@
+body{
+  margin:0;
+  padding:0;
+}
+
+button{
+  margin:20px;
+  padding:10px;
+  font-size:1em;
+}
+
+#container{
+  width:75%;
+  margin:auto;
+  margin-top:20px;
+}
+
+/*********Main Cube CSS***********/
+.scene {/*Sets the "playground" for the cube*/
+  perspective:1800px;
+
+  position:inherit;
+
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin:0px;
+  padding:0px;
+}
+
+.cube{
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+.cubeAnimation{
+  animation: cubeRotate 3s infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes cubeRotate {
+  0%   {transform: rotate3d(0, 0, 0, 0deg) scale3d(1,1,1);}
+  50% {transform: rotate3d(1, 1, 1, 180deg) scale3d(.3,.3,.3);}
+  100% {transform: rotate3d(1, 1, 1, 360deg) scale3d(1,1,1);}
+}
+@-moz-keyframes cubeRotate {
+  0%   {transform: rotate3d(0, 0, 0, 0deg) scale3d(1,1,1);}
+  50% {transform: rotate3d(1, 1, 1, 180deg) scale3d(.3,.3,.3);}
+  100% {transform: rotate3d(1, 1, 1, 360deg) scale3d(1,1,1);}
+}
+@-o-keyframes cubeRotate {
+  0%   {transform: rotate3d(0, 0, 0, 0deg) scale3d(1,1,1);}
+  50% {transform: rotate3d(1, 1, 1, 180deg) scale3d(.3,.3,.3);}
+  100% {transform: rotate3d(1, 1, 1, 360deg) scale3d(1,1,1);}
+}
+@keyframes cubeRotate {
+  0%   {transform: rotate3d(0, 0, 0, 0deg) scale3d(1,1,1);}
+  50% {transform: rotate3d(1, 1, 1, 180deg) scale3d(.3,.3,.3);}
+  100% {transform: rotate3d(1, 1, 1, 360deg) scale3d(1,1,1);}
+}
